@@ -12,6 +12,7 @@
                 <div class="col-sm-6">
                     <form class="contact-us">
                         <h3>登陆 <small>WAR微信管理平台</small></h3>
+                        <div class="alert alert-warning">错误提示</div>
                         <div class="form-group">
                             <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
                         </div>
