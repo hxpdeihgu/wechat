@@ -8,6 +8,8 @@
 namespace app\controllers;
 
 
+use app\package\PostXmlPackage;
+use app\package\RouterPackage;
 use yii\base\Controller;
 
 class WeixinController extends Controller
@@ -16,6 +18,10 @@ class WeixinController extends Controller
     {
         if($postStr = file_get_contents('php://input')){
             \Yii::info($postStr);
+            //第一步 初始化数据
+            (new PostXmlPackage())->setPostXml($postStr)->xmlToObject();
+            //第二步 处理数据类型并返回结果
+            return (new RouterPackage())->setType();
         }else{
             $this->valid();
         }

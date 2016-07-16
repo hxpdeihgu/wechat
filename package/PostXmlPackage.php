@@ -17,6 +17,7 @@ class PostXmlPackage
      */
     public function setPostXml($postXml){
         $this->postXml = $postXml;
+        return $this;
     }
 
     /**
@@ -35,6 +36,6 @@ class PostXmlPackage
      */
     public function xmlToObject(){
         \Yii::$app->params['postObject'] =  simplexml_load_string($this->getPostXml(), 'SimpleXMLElement', LIBXML_NOCDATA);
-
+        return $this;
     }
 }

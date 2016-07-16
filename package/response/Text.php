@@ -9,7 +9,7 @@
 namespace app\package\response;
 class Text
 {
-    public function a(){
-
+    public function setMethod(){
+        \Yii::info('setMethod');
     }
 }

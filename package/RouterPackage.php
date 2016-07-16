@@ -7,17 +7,21 @@
  * @Time: 下午5:08
  */
 namespace app\package;
+use app\package\response\Image;
+use app\package\response\Text;
+
 class RouterPackage
 {
     public function setType(){
-
+        $type = \Yii::$app->params['postObject']['MsgType'];
+        $this->$type();
     }
     /**
      * 文本类型路由方法
      * @author hxp
      */
     public function setText(){
-
+        (new Text())->setMethod();
     }
 
     /**
@@ -25,7 +29,7 @@ class RouterPackage
      * @author hxp
      */
     public function setImage(){
-
+        (new Image())->setMethod();
     }
 
     /**

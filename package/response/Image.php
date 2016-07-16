@@ -11,5 +11,7 @@ namespace app\package\response;
 
 class Image
 {
+    public function setMethod(){
 
+    }
 }
