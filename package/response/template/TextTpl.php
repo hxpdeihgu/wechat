@@ -17,7 +17,7 @@ class TextTpl
                 <FromUserName><![CDATA[{$data->ToUserName}]]></FromUserName>
                 <CreateTime>{$time}</CreateTime>
                 <MsgType><![CDATA[text]]></MsgType>
-                <Content><![CDATA[{$resp}]]></Content>
+                <Content><![CDATA[{$resp->content_text}]]></Content>
                 </xml>";
         echo $tpl;
     }

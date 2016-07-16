@@ -8,6 +8,7 @@ body {
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+    background: #f1f1f1;
 }
 
 .wrap > .container {
@@ -88,4 +89,16 @@ a.desc:after {
     border-left: 3px solid #eed3d7;
     padding: 10px 20px;
     margin: 0 0 15px 0;
+}
+
+.contact-us {
+    padding: 5px 0 0 57px;
+    width: 342px;
+    min-height: 327px;
+    margin-right: 66px;
+    line-height: 24px;
+}
+.contact-right{
+    background: url("./img/bg-signin-divider_2x.png") no-repeat;
+    background-size: 8px 377px;
 }

@@ -14,6 +14,11 @@ class Text
 {
     public function setMethod(){
         $method = $this->getResponseText();
+        //返回处理方法为空时直接返回
+        if(empty($method)){
+            echo "SUCCESS";
+            return;
+        }
         $method = 'resp'.ucfirst($method);
         return $this->$method();
     }
