@@ -13,8 +13,9 @@ use app\package\response\Text;
 class RouterPackage
 {
     public function setType(){
-        $type =  \Yii::$app->params['postObject']->MsgType;
+        $type = (string) \Yii::$app->params['postObject']->MsgType;
         if(!empty($type)){
+            $type = 'set'.ucfirst($type);
             $this->$type();
         }
     }
