@@ -16,7 +16,7 @@ class WeixinController extends Controller
     {
 
         if($postStr = file_get_contents('php://input')){
-
+            \Yii::info($postStr);
         }else{
             $this->valid();
         }
