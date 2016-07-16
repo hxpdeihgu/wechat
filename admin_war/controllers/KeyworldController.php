@@ -14,7 +14,7 @@ use yii\web\Controller;
 class KeyworldController extends Controller
 {
     public function actionIndex(){
-
+        return $this->render('index');
     }
 
     public function actionCreate(){
@@ -30,6 +30,18 @@ class KeyworldController extends Controller
     }
 
     public function findModel($id){
+
+    }
+
+    public function actionTextCreate(){
+        return $this->render('text-create');
+    }
+
+    public function actionTextUpdate($id){
+
+    }
+
+    public function actionTextDelete($id){
 
     }
 
