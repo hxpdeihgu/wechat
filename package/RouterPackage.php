@@ -13,8 +13,10 @@ use app\package\response\Text;
 class RouterPackage
 {
     public function setType(){
-        $type = \Yii::$app->params['postObject']['MsgType'];
-        $this->$type();
+        $type =  \Yii::$app->params['postObject']->MsgType;
+        if(!empty($type)){
+            $this->$type();
+        }
     }
     /**
      * 文本类型路由方法
