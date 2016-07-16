@@ -14,7 +14,6 @@ class WeixinController extends Controller
 {
     public function actionIndex()
     {
-
         if($postStr = file_get_contents('php://input')){
             \Yii::info($postStr);
         }else{
