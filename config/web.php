@@ -36,6 +36,7 @@ $config = [
                 [
                     'class' => 'yii\log\FileTarget',
                     'levels' => ['error', 'warning'],
+                    'logFile' => '/tmp/weixin.log',
                 ],
             ],
         ],
