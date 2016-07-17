@@ -23,11 +23,11 @@ class ResponseText
         if(empty($result)){
             return;
         }
-        $result = WarKeyContent::find()->where(['key_id'=>$result->key_id])->one();
-        if(empty($result)){
+        $resultContent = WarKeyContent::find()->where(['key_id'=>$result->key_id])->one();
+        if(empty($resultContent)){
             return;
         }
-        \Yii::$app->params[$result->content_type_text] = $result;
-        return $result->content_type_text;
+        \Yii::$app->params[$result->key_type_text] = $resultContent;
+        return $result->key_type_text;
     }
 }

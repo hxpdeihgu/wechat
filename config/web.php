@@ -7,6 +7,7 @@ $config = [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'defaultRoute' => 'default',
+    'language' => 'zh-CN',
     'modules' => [
         'admin_war' => [
             'class' => 'app\admin_war\Module',
