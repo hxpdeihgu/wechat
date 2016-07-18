@@ -7,8 +7,15 @@
  * @Time: 下午5:08
  */
 namespace app\package;
+use app\package\response\Event;
 use app\package\response\Image;
+use app\package\response\Link;
+use app\package\response\Location;
+use app\package\response\News;
+use app\package\response\Shortvideo;
 use app\package\response\Text;
+use app\package\response\Video;
+use app\package\response\Voice;
 
 class RouterPackage
 {
@@ -40,7 +47,7 @@ class RouterPackage
      * @author hxp
      */
     public function setVoice(){
-
+        (new Voice())->setMethod();
     }
 
     /**
@@ -48,7 +55,7 @@ class RouterPackage
      * @author hxp
      */
     public function setVideo(){
-
+        (new Video())->setMethod();
     }
 
     /**
@@ -56,7 +63,7 @@ class RouterPackage
      * @author hxp
      */
     public function setShortvideo(){
-
+        (new Shortvideo())->setMethod();
     }
 
     /**
@@ -64,7 +71,7 @@ class RouterPackage
      * @author hxp
      */
     public function setLocation(){
-
+        (new Location())->setMethod();
     }
 
     /**
@@ -72,7 +79,7 @@ class RouterPackage
      * @author hxp
      */
     public function setLink(){
-
+        (new Link())->setMethod();
     }
 
     /**
@@ -80,7 +87,7 @@ class RouterPackage
      * @author hxp
      */
     public function setEvent(){
-
+        (new Event())->setMethod();
     }
 
 }
