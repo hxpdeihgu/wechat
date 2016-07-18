@@ -1,7 +1,6 @@
 <?php
 /**
  * 格式树
- * @Created by uqiauto.com.
  * @author: hxp
  * @Date: 16/6/16
  * @Time: 下午1:24

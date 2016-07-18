@@ -1,7 +1,6 @@
 <?php
 /**
  * Curl操作类
- * @Created by uqiauto.com.
  * @author: hxp
  * @Date: 16/5/31
  * @Time: 上午11:14
