@@ -19,10 +19,10 @@ $this->title = Yii::t('app','登录页面');
                         <h3>登陆 <small>WAR微信管理平台</small></h3>
                         <div class="alert alert-warning">错误提示</div>
                         <div class="form-group">
-                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Username">
+                            <input type="email" name="name" class="form-control" id="exampleInputEmail1" placeholder="Username">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                         </div>
                         <div class="checkbox">
                             <label>
