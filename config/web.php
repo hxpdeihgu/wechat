@@ -12,6 +12,9 @@ $config = [
         'admin_war' => [
             'class' => 'app\admin_war\Module',
         ],
+        'web' => [
+            'class' => 'app\web\Module',
+        ],
     ],
     'components' => [
         'request' => [
