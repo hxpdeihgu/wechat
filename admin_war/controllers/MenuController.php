@@ -9,13 +9,11 @@
 namespace app\admin_war\controllers;
 
 
-class MenuController
+use yii\web\Controller;
+
+class MenuController extends Controller
 {
     public function actionSet(){
-
-    }
-
-    public function actionGet(){
-
+        return $this->render('set');
     }
 }
