@@ -1,5 +1,6 @@
 <?php
-    $this->title = Yii::t('app','登录页面');
+use yii\widgets\ActiveForm;
+$this->title = Yii::t('app','登录页面');
 ?>
 <div class="row center-block" style="margin-top: 40px">
     <div class="col-sm-10 col-sm-offset-1">
@@ -10,7 +11,11 @@
             </div>
             <div class="panel-body">
                 <div class="col-sm-6">
-                    <form class="contact-us">
+                    <?php $form = ActiveForm::begin([
+                        'options'=>[
+                            'class'=>'contact-us'
+                        ]
+                    ]); ?>
                         <h3>登陆 <small>WAR微信管理平台</small></h3>
                         <div class="alert alert-warning">错误提示</div>
                         <div class="form-group">
@@ -25,8 +30,7 @@
                             </label>
                             <button type="submit" class="btn btn-primary pull-right"><span class="glyphicon glyphicon-grain" aria-hidden="true"></span>登录</button>
                         </div>
-
-                    </form>
+                        <?php ActiveForm::end(); ?>
                 </div>
                 <div class="col-sm-6">
                     <div class="contact-us contact-right">
@@ -39,7 +43,6 @@
                         </ul>
                         <p><a class="create-account-link" id="create-account" href="" data-evar1="AOS: ">没有用户？立即创建一个。</a></p> </div>
                 </div>
-
             </div>
             <div class="panel-footer"><a href="">取消</a><span class="pull-right">如果您有问题， 欢迎随时提问。<span class="glyphicon glyphicon-envelope"></span> <strong>307701097@qq.com</strong></span></div>
         </div>
