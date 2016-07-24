@@ -5,7 +5,7 @@
  * @Time: 下午1:38
  */
 
-namespace app\admin_war\controllers;
+namespace app\controllers;
 
 
 use app\models\WarUser;
