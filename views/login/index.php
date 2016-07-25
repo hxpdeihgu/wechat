@@ -1,6 +1,7 @@
 <?php
 use yii\widgets\ActiveForm;
 $this->title = Yii::t('app','登录页面');
+$login = Yii::$app->session->getFlash('login');
 ?>
 <div class="row center-block" style="margin-top: 40px">
     <div class="col-sm-10 col-sm-offset-1">
@@ -17,9 +18,16 @@ $this->title = Yii::t('app','登录页面');
                         ]
                     ]); ?>
                         <h3>登陆 <small>WAR微信管理平台</small></h3>
-                        <div class="alert alert-warning">错误提示</div>
+                          <?php
+                          if(Yii::$app->session->hasFlash('login')){
+                              echo \yii\bootstrap\Alert::widget([
+                                  'options' => ['class' => 'alert-info'],
+                                  'body' => Yii::$app->session->getFlash('login')[0],
+                              ]);
+                          }
+                          ?>
                         <div class="form-group">
-                            <input type="email" name="name" class="form-control" id="exampleInputEmail1" placeholder="Username">
+                            <input type="text" name="name" class="form-control" id="exampleInputEmail1" placeholder="Username">
                         </div>
                         <div class="form-group">
                             <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">

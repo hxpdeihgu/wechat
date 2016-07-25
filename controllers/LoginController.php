@@ -14,7 +14,9 @@ use yii\web\Controller;
 class LoginController extends Controller
 {
     public function actionIndex(){
-        $this->doLogin();//验证用户登录
+        if(\Yii::$app->request->isPost){
+            $this->doLogin();//验证用户登录
+        }
         return $this->render('index');
     }
 
@@ -24,12 +26,12 @@ class LoginController extends Controller
      */
     private function doLogin(){
         $request = \Yii::$app->request;
+        echo md5($request->post('password'));die;
         $data = WarUser::find()->where([
             'user_name'=>$request->post('name'),
             'user_password'=>md5($request->post('password')),
             'user_status'=>1
         ])->one();
-
         if(empty($data)){
             \Yii::$app->session->addFlash('login','用户名和密码错误');
         }else{
