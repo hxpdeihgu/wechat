@@ -14,6 +14,9 @@ use yii\web\Controller;
 class LoginController extends Controller
 {
     public function actionIndex(){
+        if(\Yii::$app->session->has('user_id')){
+            \Yii::$app->getResponse()->redirect(['/admin_war']);
+        }
         if(\Yii::$app->request->isPost){
             $this->doLogin();//验证用户登录
         }
@@ -26,7 +29,6 @@ class LoginController extends Controller
      */
     private function doLogin(){
         $request = \Yii::$app->request;
-        echo md5($request->post('password'));die;
         $data = WarUser::find()->where([
             'user_name'=>$request->post('name'),
             'user_password'=>md5($request->post('password')),

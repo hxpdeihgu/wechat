@@ -252,7 +252,7 @@ $this->params['breadcrumbs'][] = '添加文本消息';
                         alert(data.answer_media_key[0]);
                         return;
                     }
-                    window.location.href='/answermedia/index/';
+                    window.location.href='/admin_war/keyworld/index/';
                 },'json');
             },
             editItem:function(index,item){

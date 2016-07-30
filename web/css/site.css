@@ -102,3 +102,22 @@ a.desc:after {
     background: url("./img/bg-signin-divider_2x.png") no-repeat;
     background-size: 8px 377px;
 }
+.navbar-inverse .navbar-nav > li > a {
+    height: 15px;
+    padding: 0 10px;
+    color: #e8e0e0;
+    line-height: 15px;
+    /*border-right: 1px solid #54698e;*/
+}
+.navbar-inverse .navbar-brand {
+    color: #f1f1f1;
+}
+@media (min-width: 768px) {
+    .navbar-right {
+        float: right !important;
+        margin-right: 0px;
+        margin-top: 20px;
+    }
+}
+
+
