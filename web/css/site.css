@@ -120,4 +120,62 @@ a.desc:after {
     }
 }
 
+/*图文回复列表样式*/
+.reply .panel-group .panel:first-child{margin:0; border-bottom-left-radius:0; border-bottom-right-radius:0;}
+.reply .panel-group .panel:first-child .img{overflow:hidden; position:relative; height:160px; background-color:#ececec; color:#c0c0c0; text-align:center; line-height:132px;}
+.reply .panel-group .panel:first-child .img img{max-height:160px; max-width:100%; vertical-align:middle;}
+.reply .panel-group .panel:first-child .img span{display:block; position:absolute; bottom:0; left:0; height:28px; line-height:28px; width:100%; background:rgba(0,0,0,0.7); color:#fff; padding:0 10px;}
+.reply .panel-group .panel+.panel{border-radius:0; margin-top:0; border-top:0;}
+.reply .panel-group .panel+.panel .panel-body{height:104px; padding-right:105px; position:relative; overflow:hidden;}
+.reply .panel-group .panel+.panel .img{float:right; position:absolute; right:15px; top:12px; height:80px; width:80px; background-color:#ececec; color:#c0c0c0; line-height:80px; text-align:center; overflow:hidden;}
+.reply .panel-group .panel+.panel .img img{max-width:80px; max-height:80px; vertical-align:middle; border:0;}
+.reply .panel-group .panel+.panel .text h4{word-break:break-all; font-size:14px; line-height:1.5em; height:54px; overflow:hidden; text-overflow:ellipsis;}
+.reply .panel-group .panel-body .mask{position:absolute; width:100%; height:100%; line-height:104px; left:0; top:0; z-index:999; background-color:rgba(229, 229, 229, 0.85) !important; text-align:center; display:none;}
+.reply .panel-group .panel:first-child .panel-body .mask{line-height:160px;}
+.reply .panel-group .panel-body .mask a{color:#333; display:inline-block; margin:0 3px; cursor:pointer;}
+.reply .panel-group .panel-body:hover .mask{display:block;}
+.reply .panel-group .panel-body .default{ font-style:normal; font-size:16px;}
+.reply .panel-group .panel:last-child{margin-bottom:20px; border-bottom-left-radius:4px; border-bottom-right-radius:4px;}
+.reply .panel-group .panel:last-child .panel-body{padding:15px;}
+.reply .panel-group .panel-body .add{border:3px dotted #b8b8b8; height:72px; line-height:72px; text-align:center; cursor:pointer; border-radius:5px;}
+.reply .panel-group img{position:absolute; left:0; top:0; display:inline-block; width:100%; height:100%;}
+.reply .panel-group{clear: both;margin-bottom: 20px; position: relative;}
+.reply .panel-group .del,.panel-group .no{position: absolute; top:-10px; width:20px; height:20px; color:#fff; background:rgba(0,0,0,0.3); text-align:center; line-height:20px; cursor:pointer; border-radius:100%;}
+.reply .panel-group .del{right:-10px;}
+.reply .panel-group .no{left:-10px;background: #3071a9}
+.reply .panel-group .del:hover{background:rgba(0,0,0,0.7);}
+.reply .panel-group .panel:last-child{margin-bottom: 0;}
+
+/*素材回复列表样式*/
+.material .panel-group{position:relative; cursor:pointer;}
+.material .panel-group .panel:first-child{margin:0; border-bottom-left-radius:0; border-bottom-right-radius:0;}
+.material .panel-group .panel:first-child .img{overflow:hidden; position:relative; height:160px; background-color:#ececec; color:#c0c0c0; text-align:center; line-height:132px;}
+.material .panel-group .panel:first-child .img img{max-height:160px; max-width:100%; vertical-align:middle;}
+.material .panel-group .panel:first-child .img span{display:block; position:absolute; bottom:0; left:0; height:28px; line-height:28px; width:100%; background:rgba(0,0,0,0.7); color:#fff; padding:0 10px;}
+.material .panel-group .panel+.panel{border-radius:0; margin-top:0; border-top:0;}
+.material .panel-group .panel+.panel .panel-body{height:104px; padding-right:105px; position:relative; overflow:hidden;}
+.material .panel-group .panel+.panel .img{float:right; position:absolute; right:15px; top:12px; height:80px; width:80px; background-color:#ececec; color:#c0c0c0; line-height:80px; text-align:center; overflow:hidden;}
+.material .panel-group .panel+.panel .img img{max-width:80px; max-height:80px; vertical-align:middle; border:0;}
+.material .panel-group .panel+.panel .text h4{word-break:break-all; font-size:14px; line-height:1.5em; height:54px; overflow:hidden; text-overflow:ellipsis;}
+.material .panel-group .panel-body .default{ font-style:normal; font-size:16px;}
+.material .panel-group .panel:last-child{margin-bottom:0px; border-bottom-left-radius:20px; border-bottom-right-radius:4px;}
+.material .panel-group .panel:last-child .panel-body{padding:15px;}
+.material .panel-group img{position:absolute; left:0; top:0; display:inline-block; width:100%; height:100%;}
+.material .panel-group .mask{position:absolute; width:100%; height:100%; left:0; top:0; z-index:10; background-color:rgba(0,0,0,0.6 ) !important; text-align:center; display:none; border-radius:4px;}
+.material .panel-group:hover .mask,.panel-group.selected .mask{display:block;}
+.material .panel-group>i{display:none; width:46px; height:46px; color:#fff; text-align:center; line-height:46px; z-index:20; position:absolute; top:50%; left:50%; margin-top:-23px; margin-left:-23px; font-size:46px; font-weight:200;}
+.material .panel-group.selected>i{display:inline-block}
+
+/*图文回复编辑样式*/
+.reply .aside{}
+.reply .aside .card{position:relative;}
+.reply .aside .panel-body{min-height:50px;}
+.reply .aside .arrow-left,.reply .aside .arrow-left:after{width: 0; height: 0; border-style: solid; border-width: 8px 10px 8px 0; border-color: transparent #d1d1d1 transparent transparent; position: absolute; left: -10px; top: 15px;}
+.reply .aside .arrow-left:after{content: ""; border-right-color: #fff; left: 1px; top: -8px;}
+.reply .aside .img{height:92px; text-align:center; position:relative; overflow:hidden; padding:0;}
+.reply .aside .img img{display:inline-block; max-width:100%; vertical-align:middle; margin:0; border:0;}
+.reply .aside .img h3{position:absolute; bottom:0; left:0; width:100%; text-align:center; z-index:2; color:#fff; background:rgba(51,51,51,0.5); padding:5px 15px; font-size:14px; line-height:1.5em; margin:0; cursor:pointer;}
+.reply .aside .img>span{display:block; border:1px solid #eee; height:100%; text-align:center; line-height:92px; cursor:pointer;}
+.reply .aside .img>span i{color:green;}
+
 

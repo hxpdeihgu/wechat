@@ -11,178 +11,176 @@ $this->params['breadcrumbs'][] = ['label'=>'回复管理','url'=>['index']];
 $this->params['breadcrumbs'][] = '添加文本消息';
 ?>
 <link rel="stylesheet" href="/css/common.css">
-<script src="/assets/c76c368e/jquery.js"></script>
+</script><script src="/assets/c76c368e/jquery.js"></script>
 <script type="text/javascript" src="/js/vue.min.js"></script>
 <script type="text/javascript" src="/js/vue-validator.js"></script>
 <script type="text/javascript" src="/js/jquery.ajaxfileupload.js"></script>
-<div class="container">
-    <div class="clearfix ng-scope" id="js-reply-form" ng-controller="replyForm">
-        <form id="reply-form" class="form-horizontal form ng-pristine ng-valid">
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">添加回复规则 <span class="text-muted">删除，修改规则、关键字以及回复后，请提交以保存操作。</span></div>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <div class="form-group" v-bind:class="[name ? 'has-success':'has-error']">
-                                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">回复规则名称</label>
-                                    <div class="col-sm-6 col-md-8 col-xs-12">
-                                        <input type="text" class="form-control" placeholder="请输入回复规则的名称" name="name" v-model="name"">
-									<span class="help-block">
-										您可以给这条规则起一个名字, 方便下次修改和查看. <br>
-									</span>
-                                    </div>
+<div class="clearfix ng-scope" id="js-reply-form" ng-controller="replyForm">
+    <form id="reply-form" class="form-horizontal form ng-pristine ng-valid">
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">添加回复规则 <span class="text-muted">删除，修改规则、关键字以及回复后，请提交以保存操作。</span></div>
+                    <ul class="list-group">
+                        <li class="list-group-item">
+                            <div class="form-group" v-bind:class="[name ? 'has-success':'has-error']">
+                                <label class="col-xs-12 col-sm-3 col-md-2 control-label">回复规则名称</label>
+                                <div class="col-sm-6 col-md-8 col-xs-12">
+                                    <input type="text" class="form-control" placeholder="请输入回复规则的名称" name="name" v-model="name"">
+                                <span class="help-block">
+                                    您可以给这条规则起一个名字, 方便下次修改和查看. <br>
+                                </span>
                                 </div>
-                                <div class="form-group" v-bind:class="[key ? 'has-success':'has-error']">
-                                    <label class="col-xs-12 col-sm-3 col-md-2 control-label">触发关键字</label>
-                                    <div class="col-sm-6 col-md-8 col-xs-12">
-                                        <input type="text" class="form-control keyword ng-pristine ng-untouched ng-valid" placeholder="请输入触发关键字" v-model="key"">
-                                        <span class="help-block"></span>
-                                        <input type="hidden" name="keywords">
-									<span class="help-block">
-										当用户的对话内容符合以上的关键字定义时，会触发这个回复定义。 <br>
-									</span>
-                                    </div>
+                            </div>
+                            <div class="form-group" v-bind:class="[key ? 'has-success':'has-error']">
+                                <label class="col-xs-12 col-sm-3 col-md-2 control-label">触发关键字</label>
+                                <div class="col-sm-6 col-md-8 col-xs-12">
+                                    <input type="text" class="form-control keyword ng-pristine ng-untouched ng-valid" placeholder="请输入触发关键字" v-model="key"">
+                                    <span class="help-block"></span>
+                                    <input type="hidden" name="keywords">
+                                <span class="help-block">
+                                    当用户的对话内容符合以上的关键字定义时，会触发这个回复定义。 <br>
+                                </span>
                                 </div>
-                            </li>
-                        </ul>
-                    </div>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
+        </div>
 
-            <div class="form-group">
-                <div class="col-sm-12">
-                    <div class="alert alert-info" style="margin-top:-20px">
-                        <i class="fa fa-info-circle"></i>
-                        图文可添加多组回复，如果添加了多组回复，系统将随机选择一条回复给粉丝
-                    </div>
-                    <div class="panel panel-default clearfix">
-                        <div class="panel-heading">回复内容</div>
-                        <div class="panel-body">
-                            <div class="row clearfix reply">
-                                <div class="col-xs-6 col-sm-3 col-md-3">
-                                    <!-- ngRepeat: items in context.groups -->
+        <div class="form-group">
+            <div class="col-sm-12">
+                <div class="alert alert-info" style="margin-top:-20px">
+                    <i class="fa fa-info-circle"></i>
+                    图文可添加多组回复，如果添加了多组回复，系统将随机选择一条回复给粉丝
+                </div>
+                <div class="panel panel-default clearfix">
+                    <div class="panel-heading">回复内容</div>
+                    <div class="panel-body">
+                        <div class="row clearfix reply">
+                            <div class="col-xs-6 col-sm-3 col-md-3">
+                                <!-- ngRepeat: items in context.groups -->
 
-                                    <div class="panel-group ng-scope">
-                                        <!-- ngRepeat: item in items -->
-                                        <template v-for="item in items">
-                                            <div class="panel panel-default ng-scope" v-if="$index == 0">
-                                                <!-- ngIf: $index == 0 -->
-                                                <div class="panel-body ng-scope" >
-                                                    <div class="img">
-                                                        <i class="default">封面图片</i>
-                                                        <img src="{{ item.img }}">
-                                                        <span class="text-left ng-binding">{{item.title}}</span>
-                                                        <div class="mask">
-                                                            <a href="javascript:;" v-on:click="editItem($index,item)"><i class="fa fa-edit"></i>编辑</a>
-                                                            <a href="javascript:;" v-on:click="removeItem($index)"><i class="fa fa-times"></i>删除</a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- end ngIf: $index == 0 -->
-                                            </div>
-                                            <!-- ngIf: $index != 0 -->
-                                            <div class="panel panel-default ng-scope" v-if="$index != 0">
-                                                <div class="panel-body ng-scope">
-                                                    <div class="text">
-                                                        <h4 class="ng-binding">{{item.title}}</h4>
-                                                    </div>
-                                                    <div class="img">
-                                                        <img src="{{ item.img }}">
-                                                        <i class="default">缩略图</i>
-                                                    </div>
+                                <div class="panel-group ng-scope">
+                                    <!-- ngRepeat: item in items -->
+                                    <template v-for="item in items">
+                                        <div class="panel panel-default ng-scope" v-if="$index == 0">
+                                            <!-- ngIf: $index == 0 -->
+                                            <div class="panel-body ng-scope" >
+                                                <div class="img">
+                                                    <i class="default">封面图片</i>
+                                                    <img src="{{ item.img }}">
+                                                    <span class="text-left ng-binding">{{item.title}}</span>
                                                     <div class="mask">
-                                                        <a href="javascript:;" v-on:click="editItem($index,item)"><i class="fa fa-edit"></i> 编辑</a>
-                                                        <a href="javascript:;" v-on:click="removeItem($index,item)"><i class="fa fa-times"></i> 删除</a>
+                                                        <a href="javascript:;" v-on:click="editItem($index,item)"><i class="fa fa-edit"></i>编辑</a>
+                                                        <a href="javascript:;" v-on:click="removeItem($index)"><i class="fa fa-times"></i>删除</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </template>
-                                        <div class="panel panel-default" v-show="items.length < 8">
-                                            <div class="panel-body" style="padding-right:15px">
-                                                <div class="add" v-on:click="items.length >= 8 ? '' : addItem();"><span><i class="fa fa-plus"></i> 添加</span></div>
+                                            <!-- end ngIf: $index == 0 -->
+                                        </div>
+                                        <!-- ngIf: $index != 0 -->
+                                        <div class="panel panel-default ng-scope" v-if="$index != 0">
+                                            <div class="panel-body ng-scope">
+                                                <div class="text">
+                                                    <h4 class="ng-binding">{{item.title}}</h4>
+                                                </div>
+                                                <div class="img">
+                                                    <img src="{{ item.img }}">
+                                                    <i class="default">缩略图</i>
+                                                </div>
+                                                <div class="mask">
+                                                    <a href="javascript:;" v-on:click="editItem($index,item)"><i class="fa fa-edit"></i> 编辑</a>
+                                                    <a href="javascript:;" v-on:click="removeItem($index,item)"><i class="fa fa-times"></i> 删除</a>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="no ng-binding">{{items.length}}</div>
-                                    </div><!-- end ngRepeat: items in context.groups -->
-                                </div>
+                                    </template>
+                                    <div class="panel panel-default" v-show="items.length < 8">
+                                        <div class="panel-body" style="padding-right:15px">
+                                            <div class="add" v-on:click="items.length >= 8 ? '' : addItem();"><span><i class="fa fa-plus"></i> 添加</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="no ng-binding">{{items.length}}</div>
+                                </div><!-- end ngRepeat: items in context.groups -->
+                            </div>
 
 
-                                <!--编辑框-->
-                                <validator name="news">
-                                    <div class="col-xs-6 col-sm-9 col-md-9 aside" id="edit-container" style="display: none">
-                                        <div style="margin-bottom: {{editHeight}}px;"></div>
-                                        <div class="card">
-                                            <div class="arrow-left"></div>
-                                            <div class="inner">
-                                                <div class="panel panel-default">
-                                                    <div class="panel-body">
-                                                        <div class="form-group">
-                                                            <label class="col-xs-12 col-sm-3 col-md-2 control-label">标题</label>
-                                                            <div class="col-sm-9 col-xs-12">
-                                                                <input type="text" class="form-control" v-model="activeItem.title" placeholder="添加图文消息的标题" name="name">
-                                                            </div>
+                            <!--编辑框-->
+                            <validator name="news">
+                                <div class="col-xs-6 col-sm-9 col-md-9 aside" id="edit-container" style="display: none">
+                                    <div style="margin-bottom: {{editHeight}}px;"></div>
+                                    <div class="card">
+                                        <div class="arrow-left"></div>
+                                        <div class="inner">
+                                            <div class="panel panel-default">
+                                                <div class="panel-body">
+                                                    <div class="form-group">
+                                                        <label class="col-xs-12 col-sm-3 col-md-2 control-label">标题</label>
+                                                        <div class="col-sm-9 col-xs-12">
+                                                            <input type="text" class="form-control" v-model="activeItem.title" placeholder="添加图文消息的标题" name="name">
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="col-xs-12 col-sm-3 col-md-2 control-label">封面</label>
-                                                            <div class="col-sm-9 col-xs-12">
-                                                                <!-- ngIf: context.activeItem.thumb == '' -->
-                                                                <div class="col-xs-3 img ng-scope">
-                                                                    <span><div  v-on:click = "changeImage(activeItem)"><i class="fa fa-plus-circle green"></i>&nbsp;添加图片</div></span>
-                                                                </div><!-- end ngIf: context.activeItem.thumb == '' -->
-                                                                <!-- ngIf: context.activeItem.thumb != '' -->
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-xs-12 col-sm-3 col-md-2 control-label">封面</label>
+                                                        <div class="col-sm-9 col-xs-12">
+                                                            <!-- ngIf: context.activeItem.thumb == '' -->
+                                                            <div class="col-xs-3 img ng-scope">
+                                                                <span><div  v-on:click = "changeImage(activeItem)"><i class="fa fa-plus-circle green"></i>&nbsp;添加图片</div></span>
+                                                            </div><!-- end ngIf: context.activeItem.thumb == '' -->
+                                                            <!-- ngIf: context.activeItem.thumb != '' -->
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="col-xs-12 col-sm-3 col-md-2 control-label">图片地址：</label>
-                                                            <div class="col-sm-9 col-xs-12">
-                                                                <input type="text" class="form-control ng-pristine ng-untouched ng-valid" v-model="activeItem.img">
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-xs-12 col-sm-3 col-md-2 control-label">图片地址：</label>
+                                                        <div class="col-sm-9 col-xs-12">
+                                                            <input type="text" class="form-control ng-pristine ng-untouched ng-valid" v-model="activeItem.img">
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="col-xs-12 col-sm-3 col-md-2 control-label"></label>
-                                                            <div class="col-sm-9 col-xs-12">
-                                                                <label>
-                                                                    封面（大图片建议尺寸：360像素 * 200像素）
-                                                                </label>
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-xs-12 col-sm-3 col-md-2 control-label"></label>
+                                                        <div class="col-sm-9 col-xs-12">
+                                                            <label>
+                                                                封面（大图片建议尺寸：360像素 * 200像素）
+                                                            </label>
                                                         </div>
-                                                        <div class="form-group">
-                                                            <label class="col-xs-12 col-sm-3 col-md-2 control-label">描述</label>
-                                                            <div class="col-sm-9 col-xs-12">
-                                                                <textarea class="form-control ng-pristine ng-untouched ng-valid" placeholder="添加图文消息的简短描述" v-model="activeItem.des"></textarea>
-                                                            </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label class="col-xs-12 col-sm-3 col-md-2 control-label">描述</label>
+                                                        <div class="col-sm-9 col-xs-12">
+                                                            <textarea class="form-control ng-pristine ng-untouched ng-valid" placeholder="添加图文消息的简短描述" v-model="activeItem.des"></textarea>
                                                         </div>
-                                                        <div class="form-group" v-bind:class="[ !$news.url.url ? 'has-success':'has-error']">
-                                                            <label class="col-xs-12 col-sm-3 col-md-2 control-label">来源</label>
-                                                            <div class="col-sm-9 col-xs-12">
-                                                                <div class="input-group">
-                                                                    <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="URL地址" v-model="activeItem.url" v-validate:url="['required','url']">
-                                                                <span class="input-group-btn">
-                                                                    <button class="btn btn-default" type="button" ng-click="context.selectLink()"><i class="fa fa-external-link"></i> URL链接</button>
-                                                                </span>
-                                                                </div>
-                                                                <span class="help-block" v-if="$news.url.url">URL地址为空，格式：http://www.uqiauto.com</span>
+                                                    </div>
+                                                    <div class="form-group" v-bind:class="[ !$news.url.url ? 'has-success':'has-error']">
+                                                        <label class="col-xs-12 col-sm-3 col-md-2 control-label">来源</label>
+                                                        <div class="col-sm-9 col-xs-12">
+                                                            <div class="input-group">
+                                                                <input type="text" class="form-control ng-pristine ng-untouched ng-valid" placeholder="URL地址" v-model="activeItem.url" v-validate:url="['required','url']">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn btn-default" type="button" ng-click="context.selectLink()"><i class="fa fa-external-link"></i> URL链接</button>
+                                                            </span>
                                                             </div>
+                                                            <span class="help-block" v-if="$news.url.url">URL地址为空，格式：http://www.uqiauto.com</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </validator>
-                            </div>
+                                </div>
+                            </validator>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="form-group">
-                <div class="col-sm-4 col-sm-offset-4">
-                    <input name="submit" type="button" v-on:click="send()" value="保存数据" class="btn btn-success col-lg-1 btn-block">
-                </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-4 col-sm-offset-4">
+                <input name="submit" type="button" v-on:click="send()" value="保存数据" class="btn btn-success col-lg-1 btn-block">
             </div>
-        </form>
-    </div>
+        </div>
+    </form>
 </div>
 
 <!-- Modal -->
