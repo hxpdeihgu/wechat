@@ -17,7 +17,6 @@ AppAsset::register($this);
 <head>
     <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://at.alicdn.com/t/font_1468667136_462986.css">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
@@ -44,11 +43,14 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right item'],
         'items' => [
-            ['label' => '欢迎。。。', 'url' => ['/site/index'],'options' => ['style'=>'border-right: 1px solid #54698e;']],
-            ['label' => '退出', 'url' => ['/site/about'],'options' => ['style'=>'border-right: 1px solid #54698e;']],
-            ['label' => '作者详情', 'url' => ['/site/contact'],'options' => ['style'=>'border-right: 1px solid #54698e;']],
-            ['label' => '交流群', 'url' => ['/site/contact']],
-
+            ['label' => '程序下载', 'url' => 'https://github.com/hxpdeihgu/wechat','options' => ['style'=>'border-right: 1px solid #54698e;']],
+            ['label' => 'email:307701097@qq.com','options' => ['style'=>'border-right: 1px solid #54698e;']],
+            ['label' => 'QQ交流群:419839333','options' => ['style'=>'border-right: 1px solid #54698e;']],
+            ['label' => Yii::$app->session->get('user_name'),'options' => ['style'=>'border-right: 1px solid #54698e;'],'items' => [
+                ['label' => '修改密码', 'url' => '#'],
+                ['label' => '个人信息', 'url' => '#'],
+            ]],
+            ['label' => '退出', 'url' => ['/login/out']],
         ],
     ]);
     NavBar::end();

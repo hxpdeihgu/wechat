@@ -10,20 +10,24 @@
     </div>
     <dl class="mi-sidenav">
         <dt class="main-menu" data-link="">
-        <div class="main-menu-div fn-left"><img src="https://i.alipayobjects.com/i/ecmng/png/201407/35WEb0s1Tj.png" seed="mainMenuDiv-iIEcmngPng20140735WEb0s1Tj" smartracker="on"></div>
+        <div class="main-menu-div fn-left">
+            <img src="https://i.alipayobjects.com/i/ecmng/png/201407/35UzHRrtYN.png">
+        </div>
         <a href="index.htm" class="menu-name " seed="mainMenu-menuName" smartracker="on">首页</a>
         </dt>
 
         <!------------消息-------------->
         <dt class="main-menu menu-parent">
-        <div class="main-menu-div fn-left"><img src="https://i.alipayobjects.com/i/ecmng/png/201407/35UzHRrtYN.png" seed="mainMenuDiv-iIEcmngPng20140735UzHRrtYN" smartracker="on"></div>
+        <div class="main-menu-div fn-left">
+            <img src="https://i.alipayobjects.com/i/ecmng/png/201407/35UzHRrtYN.png">
+        </div>
         <a href="javascript:;" class="menu-toggle" seed="mainMenu-menuToggle" smartracker="on">消息</a>
         </dt>
         <dd class="sub-menu">
             <ul class="sub-menu-list">
-                <li class="sub-menu-item "><a href="sendMessage.htm" class="sub-menu-name " seed="subMenuItem-subMenuName" smartracker="on">群发广播</a></li>
-                <li class="sub-menu-item customerServiceConfig fn-hide"><a href="customerServiceShow.htm" class="sub-menu-name " seed="subMenuItem-subMenuNameT1" smartracker="on">多客服</a></li>
-                <li class="sub-menu-item replayConfig"><a href="reply.htm" class="sub-menu-name " seed="subMenuItem-subMenuNameT2" smartracker="on">用户消息</a><span class="globTip" style="display:none;width: 10px;height: 10px;margin: -29px 0 0 121px;float: left;background-color: #f73557;border-radius: 50%;"></span></li>
+                <li class="sub-menu-item"><a href="sendMessage.htm" class="sub-menu-name " >群发广播</a></li>
+                <li class="sub-menu-item"><a href="customerServiceShow.htm" class="sub-menu-name " seed="subMenuItem-subMenuNameT1" smartracker="on">多客服</a></li>
+                <li class="sub-menu-item"><a href="reply.htm" class="sub-menu-name " seed="subMenuItem-subMenuNameT2" smartracker="on">用户消息</a><span class="globTip" style="display:none;width: 10px;height: 10px;margin: -29px 0 0 121px;float: left;background-color: #f73557;border-radius: 50%;"></span></li>
 
                 <li class="sub-menu-item"><a href="autoReply.htm" class="sub-menu-name " seed="subMenuItem-subMenuNameT3" smartracker="on">自动回复</a></li>
                 <li class="sub-menu-item"><a href="messageTemplate.htm" class="sub-menu-name-end " seed="subMenuItem-subMenuNameEnd" smartracker="on">模板消息</a></li>
@@ -36,13 +40,9 @@
         </dt>
         <dd class="sub-menu">
             <ul class="sub-menu-list">
-                <li class="sub-menu-item"><a href="material.htm" class="sub-menu-name " seed="subMenuItem-subMenuNameT4" smartracker="on">素材管理</a></li>
-                <li class="sub-menu-item menuManger"><a href="queryMenu.htm" class="sub-menu-name  sub-menu-current" data-key="menuinfo" seed="subMenuItem-subMenuNameT5" smartracker="on">菜单管理<span id="J_theRBI" class="menutheRBI" style="display: none;"></span></a></li>
-                <li class="sub-menu-item"><a href="group.htm?action=list" class="sub-menu-name " seed="subMenuItem-subMenuNameT6" smartracker="on">用户管理</a></li>
-                <!-- FD:153:publichome/consultCenterManageSwitch/topbars.vm:START --><!-- FD:153:publichome/consultCenterManageSwitch/topbars.vm:1114:consultCenterManageSwitch/ads.schema:左侧菜单开关（咨询中心）:START -->
-                <!-- FD:153:publichome/consultCenterManageSwitch/topbars.vm:1114:consultCenterManageSwitch/ads.schema:左侧菜单开关（咨询中心）:END -->
-
-                <!-- FD:153:publichome/consultCenterManageSwitch/topbars.vm:END -->                                <!-- <li class="sub-menu-item"><a href="consultCenterManage.htm" class="sub-menu-name-end ">咨询中心管理</a></li> -->
+                <li class="sub-menu-item"><a href="material.htm" class="sub-menu-name ">素材管理</a></li>
+                <li class="sub-menu-item"><a href="queryMenu.htm" class="sub-menu-name  sub-menu-current">菜单管理<span id="J_theRBI" class="menutheRBI" style="display: none;"></span></a></li>
+                <li class="sub-menu-item"><a href="group.htm?action=list" class="sub-menu-name ">用户管理</a></li>
             </ul>
         </dd>
         <!------------数据-------------->

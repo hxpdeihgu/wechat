@@ -20,6 +20,7 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/common.css',
+        'http://at.alicdn.com/t/font_1469864483_7936633.css',
     ];
     public $js = [
     ];

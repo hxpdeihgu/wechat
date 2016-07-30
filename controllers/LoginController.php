@@ -39,7 +39,17 @@ class LoginController extends Controller
         }else{
             \Yii::$app->session->set('user_name',$data->user_name);
             \Yii::$app->session->set('user_id',$data->user_id);
-            $this->redirect(['default/index']);
+            $this->redirect(['admin_war/default/index']);
         }
+    }
+
+    public function actionOut(){
+        \Yii::$app->session->remove('user_name');
+        \Yii::$app->session->remove('user_id');
+        $this->redirect(['index']);
+    }
+
+    public function actionRegist(){
+        return $this->render('regist');
     }
 }

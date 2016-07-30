@@ -25,20 +25,29 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <div class="wrap">
+    <!--[if IE 8]>
+    <div class="alert">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <strong>警告!</strong> 您的浏览器版本过低，可能部分功能无法使用.
+    </div>
+    <![endif]-->
     <?php
     NavBar::begin([
-        'brandLabel' => 'My Company',
+        'brandLabel' => 'War321|微信管理平台',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-inverse navbar-fixed-top',
+            'class' => 'navbar navbar-inverse navbar-fixed-top',
+            'style'=>'background: #294372;'
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-right item'],
         'items' => [
-            ['label' => 'Home', 'url' => ['/site/index']],
-            ['label' => 'About', 'url' => ['/site/about']],
-            ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => '程序下载', 'url' => 'https://github.com/hxpdeihgu/wechat','options' => ['style'=>'border-right: 1px solid #54698e;']],
+            ['label' => 'email:307701097@qq.com','options' => ['style'=>'border-right: 1px solid #54698e;']],
+            ['label' => 'QQ交流群:419839333','options' => ['style'=>'border-right: 1px solid #54698e;']],
+            ['label' => '注册','url'=>['login/regist'],'options' => ['style'=>'border-right: 1px solid #54698e;']],
+            ['label' => '登录', 'url' => ['login/index']],
         ],
     ]);
     NavBar::end();
@@ -54,9 +63,8 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
-
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <p class="pull-left">&copy; <a href="http://www.war321.com">War321|微信管理系统</a></p>
+        <p class="pull-right">技术支持：<a href="http://www.war321.com">化学品</a></p>
     </div>
 </footer>
 

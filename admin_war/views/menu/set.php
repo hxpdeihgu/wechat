@@ -219,20 +219,7 @@ $this->params['breadcrumbs'][] = $this->title;
     .taobaoSelect .item-cover .item-cover-tip{ font-size: 14px;letter-spacing: 5px; color: #fff;position:relative;margin-top: -28px;}
 
 
-    .qualityTesting-tips-box{border: 1px solid #E6E394;background-color: #FFFF9F;margin-bottom: 20px; padding: 20px 40px 20px 90px; position: relative;}
-    .qt-tip-text{ font-size: 14px; line-height: 20px;}
-    .qt-prompt-text{color:#999; margin-top: 10px;}
-    .qualityTesting-tips-box .iconfont {
-        font-size: 36px;
-        position: absolute;
-        top: 20px;
-        left: 40px;
-        width: 32px;
-        height: 32px;
-        line-height: 36px;
-        text-shadow: 0 1px 0 #fff;
-        color: #f96;
-    }
+
 
     .bar{
         height: 17px;
