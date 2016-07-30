@@ -47,8 +47,8 @@ AppAsset::register($this);
             ['label' => 'email:307701097@qq.com','options' => ['style'=>'border-right: 1px solid #54698e;']],
             ['label' => 'QQ交流群:419839333','options' => ['style'=>'border-right: 1px solid #54698e;']],
             ['label' => Yii::$app->session->get('user_name'),'options' => ['style'=>'border-right: 1px solid #54698e;'],'items' => [
-                ['label' => '修改密码', 'url' => '#'],
-                ['label' => '个人信息', 'url' => '#'],
+                ['label' => '修改密码', 'url' => '/admin_war/default/rpassword'],
+                ['label' => '个人信息', 'url' => '/admin_war/default/index'],
             ]],
             ['label' => '退出', 'url' => ['/login/out']],
         ],

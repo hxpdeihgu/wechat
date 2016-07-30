@@ -10,6 +10,7 @@ use yii\web\Controller;
 class DefaultController extends Controller
 {
     /**
+     * 个人中心
      * Renders the index view for the module
      * @return string
      */
@@ -17,4 +18,13 @@ class DefaultController extends Controller
     {
         return $this->render('index');
     }
+    /**
+     * 修改密码
+     * @author hxp
+     * @return [string]
+     */
+    public function actionRpassword(){
+        return $this->render('rpassword');
+    }
+
 }

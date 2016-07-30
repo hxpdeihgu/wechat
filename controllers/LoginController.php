@@ -43,12 +43,20 @@ class LoginController extends Controller
         }
     }
 
+    /**
+     * 退出登录
+     * @author hxp
+     */
     public function actionOut(){
         \Yii::$app->session->remove('user_name');
         \Yii::$app->session->remove('user_id');
         $this->redirect(['index']);
     }
-
+    /**
+     * 注册
+     * @author hxp
+     * @return [string]
+     */
     public function actionRegist(){
         return $this->render('regist');
     }
