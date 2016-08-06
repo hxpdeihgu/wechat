@@ -49,6 +49,7 @@ $this->params['breadcrumbs'][] = '关键字管理';
                     ?>
                 </td>
                 <?php }else{?>
+                <td colspan="4"></td>
                 <td colspan="4">没有数据</td>
                 <?php }?>
             </tr>

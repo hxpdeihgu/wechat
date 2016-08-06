@@ -23,6 +23,7 @@ class AppAsset extends AssetBundle
         'http://at.alicdn.com/t/font_1469864483_7936633.css',
     ];
     public $js = [
+        'js/app.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

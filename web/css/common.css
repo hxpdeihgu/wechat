@@ -873,3 +873,79 @@ h1.fn-title {
     text-shadow: 0 1px 0 #fff;
     color: #f96;
 }
+/*距离控制参数*/
+.w10{width:10px}.w20{width:20px}.w30{width:30px}.w40{width:40px}.w50{width:50px}
+.w60{width:60px}.w70{width:70px}.w80{width:80px}.w90{width:90px}.w100{width:100px}.w120{width:120px}.w130{width:130px}
+.w150{width:150px}.w200{width:200px}.w250{width:250px}.w300{width:300px}.w400{width:400px}
+.w500{width:500px}.w600{width:600px}.w700{width:700px}.w800{width:800px}
+.w{width:100%}.w-50{width:50%;}
+.h-auto{height:auto;}
+.h30{height:30px!important}.h20{height:20px}
+.h40{height:40px}.h50{height:50px}.h60{height:60px}.h70{height:70px}.h80{height:80px}.h90{height:90px}
+.h100{height:100px}.h200{height:200px}.h300{height:300px}.h400{height:400px}.h500{height:500px}
+.h{height:100%!important}
+.min-h{min-height:100%!important}
+.min-h70{min-height:70px}
+.min-h200{min-height:200px}
+.min-h300{min-height:300px}
+.min-h400{min-height:400px}
+.min-h500{min-height:500px}
+.min-h600{min-height:600px}
+.min-h700{min-height:700px}
+.min-h800{min-height:800px}
+.min-w100{min-width:100px}
+.min-w200{min-width:200px}.min-w300{min-width:300px}
+/*****************加载浮层***************************/
+.folat{
+    display:none;position:fixed;top:0px;left:0px;right:0px;bottom:0px;
+    z-index:1060;
+    background: rgba(0, 0, 0, 0.1);
+    padding-top:20%; text-align:center;
+}
+.sk-wave .sk-rect {
+    background-color: #407aaa;
+}
+/*************loading************/
+.sk-wave {
+    margin: 40px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px; }
+.sk-wave .sk-rect {
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+    -webkit-animation: sk-waveStretchDelay 1.2s infinite ease-in-out;
+    animation: sk-waveStretchDelay 1.2s infinite ease-in-out; }
+.sk-wave .sk-rect1 {
+    -webkit-animation-delay: -1.2s;
+    animation-delay: -1.2s; }
+.sk-wave .sk-rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s; }
+.sk-wave .sk-rect3 {
+    -webkit-animation-delay: -1s;
+    animation-delay: -1s; }
+.sk-wave .sk-rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s; }
+.sk-wave .sk-rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s; }
+
+@-webkit-keyframes sk-waveStretchDelay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4); }
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1); } }
+
+@keyframes sk-waveStretchDelay {
+    0%, 40%, 100% {
+        -webkit-transform: scaleY(0.4);
+        transform: scaleY(0.4); }
+    20% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1); } }

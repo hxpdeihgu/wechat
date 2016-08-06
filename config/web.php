@@ -15,6 +15,9 @@ $config = [
         'web' => [
             'class' => 'app\web\Module',
         ],
+        'admin' => [
+            'class' => 'app\admin\Module',
+        ],
     ],
     'components' => [
         'request' => [

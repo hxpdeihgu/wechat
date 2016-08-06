@@ -17,6 +17,7 @@ use Yii;
  * @property integer $user_ctime
  * @property integer $user_utime
  * @property integer $user_status
+ * @property integer $role_id
  */
 class WarUser extends \yii\db\ActiveRecord
 {
@@ -34,7 +35,7 @@ class WarUser extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_grade', 'user_ctime', 'user_utime', 'user_status'], 'integer'],
+            [['user_grade', 'user_ctime', 'user_utime', 'user_status', 'role_id'], 'integer'],
             [['user_name'], 'string', 'max' => 45],
             [['user_password'], 'string', 'max' => 32],
             [['user_avatar', 'user_email'], 'string', 'max' => 100],
@@ -58,6 +59,7 @@ class WarUser extends \yii\db\ActiveRecord
             'user_ctime' => '用户创建时间',
             'user_utime' => '跟新时间',
             'user_status' => 'User Status',
+            'role_id' => '角色id',
         ];
     }
 }
